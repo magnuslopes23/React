@@ -28,19 +28,19 @@ function RenderComments({comments}) {
         return(
             <div className="col-12 col-md-5 m-1">
                 <h4>Comments</h4>
-                <ul className="list-unstyled">
-                    {comments.map((comment)=>{
-                        return(
-                            <li key={comment.id} >
-                                <div>
-                                    <p>{comment.comment}</p>
-                                    <p>--{comment.author},
-                                    {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
-                                </div>
-                            </li>
-                        )
-                    })}
-                </ul>
+                        <ul className="list-unstyled">
+                            {comments.map((comment)=>{
+                                return(
+                                    <li key={comment.id} >
+                                        <div>
+                                            <p>{comment.comment}</p>
+                                            <p>--{comment.author},
+                                            {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
+                                        </div>
+                                    </li>
+                                )
+                            })}
+                        </ul>
             </div>
         )
     }
